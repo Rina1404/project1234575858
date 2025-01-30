@@ -1,0 +1,33 @@
+{
+  "components": [
+    {
+      "label": "Название",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_073l9td",
+        "columns": null
+      },
+      "id": "Field_0patrwg",
+      "key": "title"
+    },
+    {
+      "label": "Материал",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_1xltdmq",
+        "columns": null
+      },
+      "id": "Field_0vegcgx",
+      "key": "text"
+    }
+  ],
+  "type": "default",
+  "id": "Material",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

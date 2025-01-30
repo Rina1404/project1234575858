@@ -1,0 +1,61 @@
+{
+  "components": [
+    {
+      "text": "# Выберите предмет:",
+      "type": "text",
+      "layout": {
+        "row": "Row_01gzu8s",
+        "columns": null
+      },
+      "id": "Field_0wv7ift"
+    },
+    {
+      "label": "Дисциплина",
+      "values": [
+        {
+          "label": "Химия",
+          "value": "Chemistry"
+        },
+        {
+          "label": "Физика",
+          "value": "Physics"
+        },
+        {
+          "label": "Астрономия",
+          "value": "Astronomy"
+        },
+        {
+          "label": "Информатика",
+          "value": "Informatics"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_15d25v9",
+        "columns": 6
+      },
+      "id": "Field_11yxftb",
+      "key": "subject",
+      "defaultValue": "Physics"
+    },
+    {
+      "label": "Подтвердить",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_0gk3ydo",
+        "columns": null
+      },
+      "id": "Field_0tys0li"
+    }
+  ],
+  "type": "default",
+  "id": "descipline",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

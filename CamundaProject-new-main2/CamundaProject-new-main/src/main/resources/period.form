@@ -1,0 +1,52 @@
+{
+  "components": [
+    {
+      "text": "# Выберите период:",
+      "type": "text",
+      "layout": {
+        "row": "Row_1ciquaj",
+        "columns": null
+      },
+      "id": "Field_0dg9uc8"
+    },
+    {
+      "label": "Период",
+      "values": [
+        {
+          "label": "За месяц",
+          "value": "mounth"
+        },
+        {
+          "label": "За неделю",
+          "value": "week"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0w474vc",
+        "columns": null
+      },
+      "id": "Field_0qykeh0",
+      "key": "period"
+    },
+    {
+      "label": "Готово",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_04nrlm8",
+        "columns": null
+      },
+      "id": "Field_1gnldlr"
+    }
+  ],
+  "type": "default",
+  "id": "Period",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

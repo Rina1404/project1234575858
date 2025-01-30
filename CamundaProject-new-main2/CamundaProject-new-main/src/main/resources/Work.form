@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "text": "# Решите:",
+      "type": "text",
+      "layout": {
+        "row": "Row_02uzogt",
+        "columns": null
+      },
+      "id": "Field_1dafan3"
+    },
+    {
+      "label": "${task}",
+      "values": [
+        {
+          "label": "${answers_1}",
+          "value": "answer_one"
+        },
+        {
+          "label": "${answers_2}",
+          "value": "answer_two"
+        }
+      ],
+      "type": "checklist",
+      "layout": {
+        "row": "Row_0r5e52l",
+        "columns": null
+      },
+      "id": "Field_0oo3r3l",
+      "key": "checklist_gskws"
+    }
+  ],
+  "type": "default",
+  "id": "Work",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

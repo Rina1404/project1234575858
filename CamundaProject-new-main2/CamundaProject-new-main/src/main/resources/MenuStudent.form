@@ -1,0 +1,44 @@
+{
+  "components": [
+    {
+      "label": "Меню",
+      "values": [
+        {
+          "label": "Учеба",
+          "value": "Study"
+        },
+        {
+          "label": "Смотреть все отметки и пропуски",
+          "value": "View_all_marks_and_omissions"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0sfupk6",
+        "columns": 6
+      },
+      "id": "Field_0pp3pid",
+      "key": "menu_student",
+      "defaultValue": "Study"
+    },
+    {
+      "label": "Готово",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_0bb39uk",
+        "columns": null
+      },
+      "id": "Field_0sq09vv"
+    }
+  ],
+  "type": "default",
+  "id": "MenuStudent",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

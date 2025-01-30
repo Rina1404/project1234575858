@@ -1,0 +1,83 @@
+{
+  "components": [
+    {
+      "label": "Дисциплина",
+      "values": [
+        {
+          "label": "Химия",
+          "value": "Chemistry"
+        },
+        {
+          "label": "Физика",
+          "value": "Physics"
+        },
+        {
+          "label": "Астрономия",
+          "value": "Astronomy"
+        },
+        {
+          "label": "Информатика",
+          "value": "Informatics"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_01gzu8s",
+        "columns": 6
+      },
+      "id": "Field_11yxftb",
+      "key": "subject",
+      "defaultValue": "Physics"
+    },
+    {
+      "label": "Параграф",
+      "values": [
+        {
+          "label": "Первый параграф",
+          "value": "First_paragraph"
+        },
+        {
+          "label": "Второй параграф",
+          "value": "Second_paragraph"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0umhang",
+        "columns": 16
+      },
+      "id": "Field_19hbsdm",
+      "key": "paragraph",
+      "defaultValue": "First_paragraph"
+    },
+    {
+      "label": "Я хочу выполнить дз либо кр",
+      "type": "checkbox",
+      "layout": {
+        "row": "Row_1g2urvi",
+        "columns": null
+      },
+      "id": "Field_12onqrp",
+      "key": "homework"
+    },
+    {
+      "label": "Подтвердить",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_0gk3ydo",
+        "columns": null
+      },
+      "id": "Field_0tys0li"
+    }
+  ],
+  "type": "default",
+  "id": "StudyStudent",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

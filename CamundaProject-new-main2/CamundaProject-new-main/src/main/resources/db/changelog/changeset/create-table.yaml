@@ -1,0 +1,553 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: rina
+      changes:
+        - createTable:
+            tableName: Subjects
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: subject_name
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+                    unique: true
+
+        - createTable:
+            tableName: Teachers
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: surname_teacher
+                  type: VARCHAR(105)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name_teacher
+                  type: VARCHAR(105)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: patronymic_teacher
+                  type: VARCHAR(105)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email_teacher
+                  type: varchar(105)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: subject_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: Teachers
+                  baseColumnNames: subject_id
+                  referencedTableName: Subjects
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Classes
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: class_number
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: class_letter
+                  type: VARCHAR(10)
+              - column:
+                  name: teacher_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: Classes
+                  baseColumnNames: teacher_id
+                  referencedTableName: Teachers
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Students
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: surname_student
+                  type: VARCHAR(105)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: name_student
+                  type: VARCHAR(105)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: patronymic_student
+                  type: VARCHAR(105)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: class_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: email_student
+                  type: VARCHAR(180)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: password
+                  type: VARCHAR(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: surname_parents
+                  type: VARCHAR(105)
+              - column:
+                  name: name_parents
+                  type: VARCHAR(105)
+              - column:
+                  name: patronymic_parents
+                  type: VARCHAR(105)
+              - column:
+                  name: telephone_number_parents
+                  type: VARCHAR(20)
+              - addForeignKeyConstraint:
+                  baseTableName: Students
+                  baseColumnNames: class_id
+                  referencedTableName: Classes
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Attendance_Students
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: student_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: subject_id
+                  type: BIGINT
+                  constraints:
+              - column:
+                  name: missed_days
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: total_number_of_hours
+                  type: DOUBLE
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: AttendanceStudents
+                  baseColumnNames: student_id
+                  referencedTableName: Students
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: MarksJournal
+                  baseColumnNames: subject_id
+                  referencedTableName: Subjects
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Grades_Quarterly
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: student_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: subject_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: quarter
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: grade
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: average_score
+                  type: DOUBLE
+                  constraints:
+                    nullable: false
+              - column:
+                  name: bonuses
+                  type: INT
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: GradesQuarterly
+                  baseColumnNames: student_id
+                  referencedTableName: Students
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: GradesQuarterly
+                  baseColumnNames: subject_id
+                  referencedTableName: Subjects
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Marks_Journal
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: student_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: subject_id
+                  type: BIGINT
+              - column:
+                  name: date_assigned
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: mark
+                  type: INT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: teacher_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: bonuses
+                  type: INT
+              - addForeignKeyConstraint:
+                  baseTableName: Marks_Journal
+                  baseColumnNames: student_id
+                  referencedTableName: Students
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: Marks_Journal
+                  baseColumnNames: subject_id
+                  referencedTableName: Subjects
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: Marks_Journal
+                  baseColumnNames: teacher_id
+                  referencedTableName: Teachers
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Student_Averages
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: student_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: average_mark
+                  type: DOUBLE
+
+              - column:
+                  name: total_bonuses
+                  type: INT
+
+              - addForeignKeyConstraint:
+                  baseTableName: Student_Averages
+                  baseColumnNames: student_id
+                  referencedTableName: Students
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Attendance_Journal
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: student_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: subject_id
+                  type: BIGINT
+              - column:
+                  name: date_assigned
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: miss_day
+                  type: BOOLEAN
+              - column:
+                  name: teacher_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: number_of_hours
+                  type: DOUBLE
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: AttendanceJournal
+                  baseColumnNames: student_id
+                  referencedTableName: Students
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: AttendanceJournal
+                  baseColumnNames: teacher_id
+                  referencedTableName: Teachers
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: AttendanceJournal
+                  baseColumnNames: subject_id
+                  referencedTableName: Subjects
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Homework
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: subject_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: homework_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: questions
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: answers1
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: answers_one
+                  type: BOOLEAN
+                  constraints:
+                    nullable: true
+              - column:
+                  name: answers2
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: answers_two
+                  type: BOOLEAN
+                  constraints:
+                    nullable: true
+              - column:
+                  name: student_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: Homework
+                  baseColumnNames: student_id
+                  referencedTableName: Students
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: Homework
+                  baseColumnNames: subject_id
+                  referencedTableName: Subjects
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Test
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: subject_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: test_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: task
+                  type: varchar(455)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: answers1
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: answers_one
+                  type: BOOLEAN
+                  constraints:
+                    nullable: true
+              - column:
+                  name: answers2
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: answers_two
+                  type: BOOLEAN
+                  constraints:
+                    nullable: true
+              - column:
+                  name: student_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - addForeignKeyConstraint:
+                  baseTableName: Test
+                  baseColumnNames: student_id
+                  referencedTableName: Students
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: Test
+                  baseColumnNames: subject_id
+                  referencedTableName: Subjects
+                  referencedColumnNames: id
+
+        - createTable:
+            tableName: Materials
+            columns:
+              - column:
+                  name: id
+                  type: BIGINT
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(255)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: text
+                  type: LONGTEXT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: student_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+              - column:
+                  name: subject_id
+                  type: BIGINT
+                  constraints:
+                    nullable: false
+
+              - addForeignKeyConstraint:
+                  baseTableName: Materials
+                  baseColumnNames: student_id
+                  referencedTableName: Students
+                  referencedColumnNames: id
+              - addForeignKeyConstraint:
+                  baseTableName: Materials
+                  baseColumnNames: subject_id
+                  referencedTableName: Subjects
+                  referencedColumnNames: id

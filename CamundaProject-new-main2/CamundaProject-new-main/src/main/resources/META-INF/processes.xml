@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<process-application
+        xmlns="http://www.camunda.org/schema/1.0/ProcessApplication"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <process-archive name="family">
+        <process-engine>default</process-engine>
+
+        <resource>avto.form</resource>
+        <resource>H_AND_T.form</resource>
+        <resource>period.form</resource>
+        <resource>study_student.form</resource>
+        <resource>view_all_marks_student_main.form</resource>
+        <resource>MenuStudent.form</resource>
+        <resource>Work.form</resource>
+        <resource>Stat-Marks.form</resource>
+        <resource>descipline.form</resource>
+        <resource>Material.form</resource>
+        <resource>Stat-Omissions.form</resource>
+        <resource>teacher_choice.form</resource>
+        <resource>main_menu_teacher.form</resource>
+        <resource>Teach_student.form</resource>
+        <resource>check_hom_main.form</resource>
+        <resource>Mark-add.form</resource>
+        <resource>Omission.form</resource>
+        <resource>Something.form</resource>
+        <resource>material_add.form</resource>
+
+
+        <properties>
+            <property name="isDeleteUponUndeploy">false</property>
+            <property name="isScanForProcessDefinitions">true</property>
+        </properties>
+    </process-archive>
+
+</process-application>

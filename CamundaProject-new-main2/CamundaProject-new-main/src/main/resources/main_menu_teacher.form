@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "label": "Меню",
+      "values": [
+        {
+          "label": "Проверить работы",
+          "value": "Check_the_works"
+        },
+        {
+          "label": "Добавить информацию",
+          "value": "Add_information"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0f0ff3l",
+        "columns": 6
+      },
+      "id": "Field_0pjc3ma",
+      "key": "menu_teacher"
+    },
+    {
+      "text": "Онлайн-школа",
+      "type": "text",
+      "layout": {
+        "row": "Row_0f0ff3l",
+        "columns": null
+      },
+      "id": "Field_1vkmbqq"
+    }
+  ],
+  "type": "default",
+  "id": "MenuTeacher",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

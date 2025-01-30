@@ -1,0 +1,717 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: rina
+      changes:
+        - insert:
+            tableName: Subjects
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: subject_name
+                  value: "Physics"
+        - insert:
+            tableName: Subjects
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: subject_name
+                  value: "Informatics"
+        - insert:
+            tableName: Subjects
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: subject_name
+                  value: "Astronomy"
+        - insert:
+            tableName: Subjects
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: subject_name
+                  value: "Chemistry"
+
+        - insert:
+            tableName: Teachers
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: surname_teacher
+                  value: "Иванова"
+              - column:
+                  name: name_teacher
+                  value: "Елена"
+              - column:
+                  name: patronymic_teacher
+                  value: "Ивановна"
+              - column:
+                  name: email_teacher
+                  value: "ivanova@mail.ru"
+              - column:
+                  name: password
+                  value: "lala"
+              - column:
+                  name: subject_id
+                  value: 1
+        - insert:
+            tableName: Teachers
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: surname_teacher
+                  value: "Петрова"
+              - column:
+                  name: name_teacher
+                  value: "Галина"
+              - column:
+                  name: patronymic_teacher
+                  value: "Анатольевна"
+              - column:
+                  name: email_teacher
+                  value: "petrova@mail.ru"
+              - column:
+                  name: password
+                  value: "83498"
+              - column:
+                  name: subject_id
+                  value: 2
+        - insert:
+            tableName: Teachers
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: surname_teacher
+                  value: "Ложникова"
+              - column:
+                  name: name_teacher
+                  value: "Наталья"
+              - column:
+                  name: patronymic_teacher
+                  value: "Владимировна"
+              - column:
+                  name: email_teacher
+                  value: "lozhw9@mail.ru"
+              - column:
+                  name: password
+                  value: "69940"
+              - column:
+                  name: subject_id
+                  value: 3
+        - insert:
+            tableName: Teachers
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: surname_teacher
+                  value: "Белов"
+              - column:
+                  name: name_teacher
+                  value: "Геннадий"
+              - column:
+                  name: patronymic_teacher
+                  value: "Ивавич"
+              - column:
+                  name: email_teacher
+                  value: "belov43@mail.ru"
+              - column:
+                  name: password
+                  value: "63559"
+              - column:
+                  name: subject_id
+                  value: 4
+
+        - insert:
+            tableName: Classes
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: class_number
+                  value: 10
+              - column:
+                  name: class_letter
+                  value: "В"
+              - column:
+                  name: teacher_id
+                  value: 2
+        - insert:
+            tableName: Classes
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: class_number
+                  value: 9
+              - column:
+                  name: class_letter
+                  value: "А"
+              - column:
+                  name: teacher_id
+                  value: 1
+        - insert:
+            tableName: Classes
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: class_number
+                  value: 11
+              - column:
+                  name: class_letter
+                  value: "Б"
+              - column:
+                  name: teacher_id
+                  value: 3
+        - insert:
+            tableName: Classes
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: class_number
+                  value: 11
+              - column:
+                  name: class_letter
+                  value: "В"
+              - column:
+                  name: teacher_id
+                  value: 4
+
+        - insert:
+            tableName: Students
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: surname_student
+                  value: "Иванов"
+              - column:
+                  name: name_student
+                  value: "Иван"
+              - column:
+                  name: patronymic_student
+                  value: "Иванович"
+              - column:
+                  name: class_id
+                  value: 2
+              - column:
+                  name: email_student
+                  value: "ivanov@example.com"
+              - column:
+                  name: password
+                  value: "lala"
+              - column:
+                  name: surname_parents
+                  value: "Иванова"
+              - column:
+                  name: name_parents
+                  value: "Анна"
+              - column:
+                  name: patronymic_parents
+                  value: "Анатольевна"
+              - column:
+                  name: telephone_number_parents
+                  value: "+3-123-456-7890"
+        - insert:
+            tableName: Students
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: surname_student
+                  value: "Жук"
+              - column:
+                  name: name_student
+                  value: "Даниил"
+              - column:
+                  name: patronymic_student
+                  value: "Петрович"
+              - column:
+                  name: class_id
+                  value: 1
+              - column:
+                  name: email_student
+                  value: "zhuk354@example.com"
+              - column:
+                  name: password
+                  value: "47809"
+              - column:
+                  name: surname_parents
+                  value: "Петрова"
+              - column:
+                  name: name_parents
+                  value: "Ирина"
+              - column:
+                  name: patronymic_parents
+                  value: "Викторовна"
+              - column:
+                  name: telephone_number_parents
+                  value: "+3-123-593-3869"
+        - insert:
+            tableName: Students
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: surname_student
+                  value: "Кузнецова"
+              - column:
+                  name: name_student
+                  value: "Анастасия"
+              - column:
+                  name: patronymic_student
+                  value: "Витальевна"
+              - column:
+                  name: class_id
+                  value: 3
+              - column:
+                  name: email_student
+                  value: "kuz57@example.com"
+              - column:
+                  name: password
+                  value: "85930"
+              - column:
+                  name: surname_parents
+                  value: "Кузнецова"
+              - column:
+                  name: name_parents
+                  value: "Алина"
+              - column:
+                  name: patronymic_parents
+                  value: "Геннадьевна"
+              - column:
+                  name: telephone_number_parents
+                  value: "+3-123-489-5904"
+        - insert:
+            tableName: Students
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: surname_student
+                  value: "Павлов"
+              - column:
+                  name: name_student
+                  value: "Павел"
+              - column:
+                  name: patronymic_student
+                  value: "Павлович"
+              - column:
+                  name: class_id
+                  value: 4
+              - column:
+                  name: email_student
+                  value: "pavlov48@example.com"
+              - column:
+                  name: password
+                  value: "43093"
+              - column:
+                  name: surname_parents
+                  value: "Павлов"
+              - column:
+                  name: name_parents
+                  value: "Александр"
+              - column:
+                  name: patronymic_parents
+                  value: "Константинович"
+              - column:
+                  name: telephone_number_parents
+                  value: "+3-123-490-4399"
+
+
+
+        - insert:
+            tableName: Attendance_Students
+            columns:
+              - column:
+                  name: id
+                  value: 0
+              - column:
+                  name: student_id
+                  value: 1
+              - column:
+                  name: subject_id
+                  value: 1
+              - column:
+                  name: missed_days
+                  value: 0
+              - column:
+                  name: total_number_of_hours
+                  value: 1.3
+
+
+        - insert:
+            tableName: Grades_Quarterly
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: student_id
+                  value: 1
+              - column:
+                  name: subject_id
+                  value: 1
+              - column:
+                  name: quarter
+                  value: 1
+              - column:
+                  name: grade
+                  value: 9
+              - column:
+                  name: average_score
+                  value: 9.0
+              - column:
+                  name: bonuses
+                  value: 1
+
+        - insert:
+            tableName: Marks_Journal
+            columns:
+              - column:
+                  name: id
+                  value: 0
+              - column:
+                  name: student_id
+                  value: 1
+              - column:
+                  name: subject_id
+                  value: 1
+              - column:
+                  name: date_assigned
+                  value: "2023-10-05"
+              - column:
+                  name: mark
+                  value: 9
+              - column:
+                  name: teacher_id
+                  value: 1
+              - column:
+                  name: bonuses
+                  value: 1
+
+        - insert:
+            tableName: Attendance_Journal
+            columns:
+              - column:
+                  name: id
+                  value: 0
+              - column:
+                  name: student_id
+                  value: 1
+              - column:
+                  name: subject_id
+                  value: 1
+              - column:
+                  name: date_assigned
+                  value: "01.03.2022"
+              - column:
+                  name: miss_day
+                  value: true
+              - column:
+                  name: number_of_hours
+                  value: 1.3
+              - column:
+                  name: teacher_id
+                  value: 1
+
+
+        - insert:
+            tableName: Homework
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: subject_id
+                  value: 1
+              - column:
+                  name: homework_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Домашнее задание по параграфу 1:"
+              - column:
+                  name: questions
+                  value: "СИ периода:?"
+              - column:
+                  name: answers1
+                  value: "Герц"
+              - column:
+                  name: answers2
+                  value: "Секунда"
+              - column:
+                  name: student_id
+                  value: 1
+        - insert:
+            tableName: Homework
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: subject_id
+                  value: 1
+              - column:
+                  name: homework_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Домашнее задание по параграфу 2:"
+              - column:
+                  name: questions
+                  value: "Колебания под дейсвтием силы:?"
+              - column:
+                  name: answers1
+                  value: "Являются затухающими"
+              - column:
+                  name: answers2
+                  value: "Не являются затухающими"
+              - column:
+                  name: student_id
+                  value: 1
+        - insert:
+            tableName: Homework
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: subject_id
+                  value: 2
+              - column:
+                  name: homework_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Домашнее задание по параграфу 1:"
+              - column:
+                  name: questions
+                  value: "Амплитудой колебаний называют:?"
+              - column:
+                  name: answers1
+                  value: "Длину нити маятника"
+              - column:
+                  name: answers2
+                  value: "Отклон от положения равновесия"
+              - column:
+                  name: student_id
+                  value: 1
+        - insert:
+            tableName: Homework
+            columns:
+              - column:
+                  name: id
+                  value: 4
+              - column:
+                  name: subject_id
+                  value: 2
+              - column:
+                  name: homework_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Домашнее задание по параграфу 2:"
+              - column:
+                  name: questions
+                  value: "Формула периода колебаний:?"
+              - column:
+                  name: answers1
+                  value: "T = 1 / V"
+              - column:
+                  name: answers2
+                  value: "T = 1 / S"
+              - column:
+                  name: student_id
+                  value: 1
+        - insert:
+            tableName: Homework
+            columns:
+              - column:
+                  name: id
+                  value: 5
+              - column:
+                  name: subject_id
+                  value: 3
+              - column:
+                  name: homework_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Домашнее задание по параграфу 1:"
+              - column:
+                  name: questions
+                  value: "Частотой колебаний называют:"
+              - column:
+                  name: answers1
+                  value: "Число колебаний в 1 ед. t"
+              - column:
+                  name: answers2
+                  value: "Время 1 колебания"
+              - column:
+                  name: student_id
+                  value: 1
+        - insert:
+            tableName: Homework
+            columns:
+              - column:
+                  name: id
+                  value: 6
+              - column:
+                  name: subject_id
+                  value: 3
+              - column:
+                  name: homework_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Домашнее задание по параграфу 2:"
+              - column:
+                  name: questions
+                  value: "Периодом колебаний называют:"
+              - column:
+                  name: answers1
+                  value: "Промежуток t за 1 полное колебание"
+              - column:
+                  name: answers2
+                  value: "t в периоде колеблется тело"
+              - column:
+                  name: student_id
+                  value: 1
+
+
+
+        - insert:
+            tableName: Test
+            columns:
+              - column:
+                  name: id
+                  value: 1
+              - column:
+                  name: subject_id
+                  value: 1
+              - column:
+                  name: test_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Контрольная работа по параграфу 1:"
+              - column:
+                  name: task
+                  value: "Начальный уровень. У математического маятника длина 1 м. Рассчитайте период колебаний этого маятника."
+              - column:
+                  name: answers1
+                  value: "0,6 с"
+              - column:
+                  name: answers2
+                  value: "0,8 с"
+              - column:
+                  name: student_id
+                  value: 1
+        - insert:
+            tableName: Test
+            columns:
+              - column:
+                  name: id
+                  value: 2
+              - column:
+                  name: subject_id
+                  value: 1
+              - column:
+                  name: test_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Контрольная работа по параграфу 2:"
+              - column:
+                  name: task
+                  value: "Средний уровень. Пружинный маятник с массой 0,5 кг и жесткостью пружины 200 Н/м выполняет гармоческие колебания . Найдите период этих колебаний."
+              - column:
+                  name: answers1
+                  value: "0,314 с"
+              - column:
+                  name: answers2
+                  value: "0,5 с"
+              - column:
+                  name: student_id
+                  value: 1
+        - insert:
+            tableName: Test
+            columns:
+              - column:
+                  name: id
+                  value: 3
+              - column:
+                  name: subject_id
+                  value: 2
+              - column:
+                  name: test_id
+                  value: 1
+              - column:
+                  name: title
+                  value: "Контрольная работа по параграфу 1:"
+              - column:
+                  name: task
+                  value: "Высокий уровень. Найдите максимальную скорость колеблющегося тела, зная, что амплитуда 0,1 м, угловая частота 2 pi*рад/с и начальная фаза 0."
+              - column:
+                  name: answers1
+                  value: "0,628 с"
+              - column:
+                  name: answers2
+                  value: "1 с"
+              - column:
+                  name: student_id
+                  value: 1
+
+        - insert:
+            tableName: Materials
+            columns:
+              - column:
+                  name: id
+                  value: 0
+              - column:
+                  name: title
+                  value: "Колебательное движение. Гармонические колебания"
+              - column:
+                  name: text
+                  value: "Разные виды механического движения характеризуются различной степенью повторяемости. Так при поступательном движении тело может вообще не вернуться в исходное положение, тогда как при вращательном движении это произойдет через промежуток времени, равный периоду обращения T. T = N / t
+        В окружающем нас мире очень широко распространен и такой вид движения тела, при котором оно сначала движется в прямом направлении, а затем — в обратном. Такое движение повторяется неоднократно по одной и той же траектории. При этом через любую точку траектории, за исключением крайних точек 1 и 2 , тело проходит как в прямом, так и в обратном направлениях.
+
+        Такой вид движения называется колебательным. Колебательное движение совершают такие механические системы, как маятник, качели, листья деревьев под воздействием ветра, струны при игре на гитаре или пианино. Движение атомов в кристаллической решетке также носит колебательный характер.
+
+        Таким образом, для  колебательного движения характерно свойство повторяемости. Когда физические величины характеризующие движение  (например, координата x, проекции скорости vx и действующей силы Fx) принимают одни и те же значения через равные промежутки времени, то такие колебания (движения) называются периодическими.
+
+        Минимальный промежуток времени, по истечении которого повторяются значения всех физических величин, характеризующих колебание, называется периодом колебаний и обозначается буквой  T: где Δt  — промежуток времени, за который произошло N колебаний. Колебания по своей природе могут быть не только механическими, но и электромагнитными (периодические изменения напряжения и силы тока в электрической цепи), термодинамическими (колебания температуры с течением времени) и т. д. Таким образом, колебания — это особая форма движения в том смысле, что различные по своей природе физические процессы (механические, электромагнитные и т. д.) описываются одинаковыми математическими зависимостями физических величин от времени.
+
+        Для описания колебаний, как и для вращательного движения, наряду с периодом колебаний T используют величину, которая называется частотой колебаний. Она обозначается буквой v.Для механической «записи» колебаний можно использовать установку, изображенную на рисунке 3. В этой установке к грузу, подвешенному на двух нитях, прикреплен фломастер (рис. 4). Он может свободно перемещается в трубочке для того, чтобы постоянно касаться листа бумаги при колебаниях груза. Если отклонить груз поперек листа бумаги и отпустить, то кончик фломастера будет описывать на листе прямую линию, которая является траекторией движения груза"
+              - column:
+                  name: student_id
+                  value: 1
+              - column:
+                  name: subject_id
+                  value: 1

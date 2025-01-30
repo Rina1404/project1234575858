@@ -1,0 +1,62 @@
+{
+  "components": [
+    {
+      "text": "# Статистика по оценкам:",
+      "type": "text",
+      "layout": {
+        "row": "Row_1hoyb6k",
+        "columns": null
+      },
+      "id": "Field_1bkvnbm"
+    },
+    {
+      "label": "Средняя оценка:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18tzeh2",
+        "columns": 4
+      },
+      "id": "Field_0qj8oal",
+      "key": "avg"
+    },
+    {
+      "label": "Фамилия преподавателя:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18tzeh2",
+        "columns": 4
+      },
+      "id": "Field_1uxigaq",
+      "key": "surnameTeacher"
+    },
+    {
+      "label": "Бонусы:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18tzeh2",
+        "columns": 4
+      },
+      "id": "Field_0s1ej2y",
+      "key": "bonuses"
+    },
+    {
+      "label": "Оценки:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18tzeh2",
+        "columns": null
+      },
+      "id": "Field_0a8rzpr",
+      "key": "marks"
+    }
+  ],
+  "type": "default",
+  "id": "Stat-Marks",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

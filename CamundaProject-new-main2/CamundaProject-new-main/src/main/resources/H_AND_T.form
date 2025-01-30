@@ -1,0 +1,72 @@
+{
+  "components": [
+    {
+      "text": "# Выберите что хотите выполнить:",
+      "type": "text",
+      "layout": {
+        "row": "Row_0vsq9fq",
+        "columns": null
+      },
+      "id": "Field_12s6xpd"
+    },
+    {
+      "label": "выберите:",
+      "values": [
+        {
+          "label": "Домашнее задание",
+          "value": "HOMEWORKS"
+        },
+        {
+          "label": "Контрольная работа",
+          "value": "TEST"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0x7xyfc",
+        "columns": null
+      },
+      "id": "Field_1nk1dof",
+      "key": "choice"
+    },
+    {
+      "label": "Выберите параграф:",
+      "values": [
+        {
+          "label": "Первый параграф",
+          "value": "First_paragraph"
+        },
+        {
+          "label": "Второй параграф",
+          "value": "Second_paragraph"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_0i33kg2",
+        "columns": null
+      },
+      "id": "Field_0y1t95i",
+      "key": "paragraph"
+    },
+    {
+      "label": "Готово",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1im0fo5",
+        "columns": null
+      },
+      "id": "Field_1313p3s"
+    }
+  ],
+  "type": "default",
+  "id": "H_AND_T",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

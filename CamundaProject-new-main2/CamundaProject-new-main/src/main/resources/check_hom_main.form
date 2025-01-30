@@ -1,0 +1,52 @@
+{
+  "components": [
+    {
+      "text": "# Какой класс?",
+      "type": "text",
+      "layout": {
+        "row": "Row_0onganw",
+        "columns": null
+      },
+      "id": "Field_08icfoc"
+    },
+    {
+      "label": "Номер класса",
+      "type": "number",
+      "layout": {
+        "row": "Row_0chdfat",
+        "columns": null
+      },
+      "id": "Field_0e6nudb",
+      "key": "Class_numb"
+    },
+    {
+      "label": "Буква класса",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_01mkm68",
+        "columns": null
+      },
+      "id": "Field_1rottga",
+      "key": "Class_letter"
+    },
+    {
+      "label": "Готово",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1wypms4",
+        "columns": null
+      },
+      "id": "Field_09drz2x"
+    }
+  ],
+  "type": "default",
+  "id": "CheckTeacher",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

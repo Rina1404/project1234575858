@@ -1,0 +1,52 @@
+{
+  "components": [
+    {
+      "text": "# Поставьте оценку и дату выставления:",
+      "type": "text",
+      "layout": {
+        "row": "Row_15uf8st",
+        "columns": null
+      },
+      "id": "Field_1ellx2a"
+    },
+    {
+      "label": "Оценка",
+      "type": "number",
+      "layout": {
+        "row": "Row_0o4x6de",
+        "columns": null
+      },
+      "id": "Field_10ene85",
+      "key": "markTeacher"
+    },
+    {
+      "label": "Число(ДД.ММ.ГГГГ.) ",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0j9ggpz",
+        "columns": null
+      },
+      "id": "Field_03wtpbj",
+      "key": "date"
+    },
+    {
+      "label": "Готово",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1pvso0x",
+        "columns": null
+      },
+      "id": "Field_1a4otrs"
+    }
+  ],
+  "type": "default",
+  "id": "Mark-add",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

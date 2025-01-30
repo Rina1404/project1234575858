@@ -1,0 +1,52 @@
+{
+  "components": [
+    {
+      "text": "# Оставьте дату отсутсвующему:",
+      "type": "text",
+      "layout": {
+        "row": "Row_1pzu7tb",
+        "columns": null
+      },
+      "id": "Field_1le0292"
+    },
+    {
+      "label": "Сколько часов пропущено за этот день:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_09td9qb",
+        "columns": null
+      },
+      "id": "Field_0iqh2ou",
+      "key": "hours"
+    },
+    {
+      "label": "Число(ДД.ММ.ГГГГ.) ",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_05tnv1j",
+        "columns": null
+      },
+      "id": "Field_026dn15",
+      "key": "date"
+    },
+    {
+      "label": "Поставить",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_1ez6u7g",
+        "columns": null
+      },
+      "id": "Field_1njqu5f"
+    }
+  ],
+  "type": "default",
+  "id": "Omission",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

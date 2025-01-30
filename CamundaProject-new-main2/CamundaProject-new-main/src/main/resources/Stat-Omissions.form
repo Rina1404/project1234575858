@@ -1,0 +1,52 @@
+{
+  "components": [
+    {
+      "text": "# Статистика по пропускам:",
+      "type": "text",
+      "layout": {
+        "row": "Row_1hoyb6k",
+        "columns": null
+      },
+      "id": "Field_1bkvnbm"
+    },
+    {
+      "label": "Сколько пропущенно дней:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18tzeh2",
+        "columns": 4
+      },
+      "id": "Field_0qj8oal",
+      "key": "missDay"
+    },
+    {
+      "label": "Пропущенные часы в сумме:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_18tzeh2",
+        "columns": 4
+      },
+      "id": "Field_1uxigaq",
+      "key": "missTime"
+    },
+    {
+      "label": "Пропуски:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_0zl7cw0",
+        "columns": null
+      },
+      "id": "Field_0v618ew",
+      "key": "date_miss"
+    }
+  ],
+  "type": "default",
+  "id": "Stat-Omissions",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

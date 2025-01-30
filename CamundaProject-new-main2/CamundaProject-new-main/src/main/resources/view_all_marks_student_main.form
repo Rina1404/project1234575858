@@ -1,0 +1,53 @@
+{
+  "components": [
+    {
+      "text": "# Выберите что хотите узнать:",
+      "type": "text",
+      "layout": {
+        "row": "Row_02u88gd",
+        "columns": null
+      },
+      "id": "Field_0umvfu0"
+    },
+    {
+      "label": "Меню",
+      "values": [
+        {
+          "label": "Просмотреть пропуски",
+          "value": "omissions"
+        },
+        {
+          "label": "Просмотреть оценки",
+          "value": "marks"
+        }
+      ],
+      "type": "select",
+      "layout": {
+        "row": "Row_1lcfd82",
+        "columns": 6
+      },
+      "id": "Field_058hwa2",
+      "key": "marks_ommits",
+      "defaultValue": "View_all_marks_and_omissions"
+    },
+    {
+      "label": "Готово",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_0ikpf5b",
+        "columns": null
+      },
+      "id": "Field_0z79u4p"
+    }
+  ],
+  "type": "default",
+  "id": "ViewMarksStudent",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}

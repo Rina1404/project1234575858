@@ -1,0 +1,42 @@
+{
+  "components": [
+    {
+      "text": "# Введите фамилию ученика:",
+      "type": "text",
+      "layout": {
+        "row": "Row_0hkzskk",
+        "columns": null
+      },
+      "id": "Field_1lfw9a6"
+    },
+    {
+      "label": "Введите:",
+      "type": "textfield",
+      "layout": {
+        "row": "Row_151rjwp",
+        "columns": null
+      },
+      "id": "Field_1pirozw",
+      "key": "studentSurname"
+    },
+    {
+      "label": "Готово",
+      "action": "submit",
+      "type": "button",
+      "layout": {
+        "row": "Row_04qqntp",
+        "columns": null
+      },
+      "id": "Field_13gjej3"
+    }
+  ],
+  "type": "default",
+  "id": "Teach_student",
+  "exporter": {
+    "name": "Camunda Modeler",
+    "version": "5.30.0"
+  },
+  "executionPlatform": "Camunda Platform",
+  "executionPlatformVersion": "7.22.0",
+  "schemaVersion": 17
+}
